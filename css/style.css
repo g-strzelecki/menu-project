@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    height: 300vh;
+}
+
+.wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav.desktop {
+    float: left;
+    width: 300px;
+    height: 360px;
+}
+
+header {
+    float: left;
+    height: 360px;
+    background-image: url("../img/pianino.jpg");
+    background-position: center;
+    background-size: cover;
+    width: calc(100% - 300px);
+}
+
+section {
+    margin-top: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    line-height: 72px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+nav.desktop i {
+    width: 80px;
+    border-right: 2px solid black;
+    margin-right: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+nav.desktop li a:hover i {
+    color: orange;
+    margin-right: 60px;
+}
+
+nav.desktop li a:hover {
+    color: orange;
+}
+
+nav.mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        position: fixed;
+        display: block;
+        width: 72px;
+        height: 100%;
+        background-color: black;
+        color: white;
+    }
+
+    nav.mobile a {
+        display: block;
+        height: 10vh;
+        color: white;
+        text-align: center;
+    }
+
+    nav.mobile a:hover i {
+        color: orange;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    section h1 {
+        font-size: 20px;
+    }
+}
